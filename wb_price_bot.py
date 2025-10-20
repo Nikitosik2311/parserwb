@@ -7,7 +7,7 @@ from urllib.parse import quote_plus
 from datetime import datetime
 
 # Настройки (можно переопределить через переменные окружения)
-TELEGRAM_TOKEN = os.environ.get('TELEGRAM_TOKEN', 'PUT_YOUR_TELEGRAM_BOT_TOKEN_HERE')
+TELEGRAM_TOKEN = os.environ.get('TELEGRAM_TOKEN', '8386113120:AAEgX67MXEKOBUL8HBU5UWSpfHEO5TALY2c')
 TELEGRAM_CHAT_ID = os.environ.get('TELEGRAM_CHAT_ID', '1013871325')  # numeric chat id
 CHECK_INTERVAL = int(os.environ.get('CHECK_INTERVAL_SECONDS', 300))  # повтор проверок в секундах (по умолчанию 5 минут)
 
