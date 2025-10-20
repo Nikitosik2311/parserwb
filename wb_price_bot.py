@@ -1,16 +1,4 @@
-"""
-Wildberries Price Watcher — готовый Telegram-бот
-Файлы в одном документе:
-- wb_price_bot.py         (основной скрипт)
-- requirements.txt       (зависимости)
-- README.md              (короткая инструкция по деплою на бесплатный хостинг)
 
-Как использовать: см. README.md внизу.
-
-Автор: Vasiliev Marketing — код для личного использования
-"""
-
-# ---------------- wb_price_bot.py ----------------
 import requests
 import time
 import json
@@ -218,39 +206,3 @@ if __name__ == '__main__':
         print('Stopped by user')
 
 
-# ---------------- requirements.txt ----------------
-# requests
-
-
-# ---------------- README.md ----------------
-# Wildberries Price Watcher — инструкция по запуску
-
-1) Создай Telegram-бота через @BotFather и получи TOKEN.
-2) Подготовь переменные окружения (в панели хостинга или локально):
-   - TELEGRAM_TOKEN — токен бота
-   - TELEGRAM_CHAT_ID — числовой ID (ты прислал: 1013871325)
-   - CHECK_INTERVAL_SECONDS — (опционально) интервал проверок в секундах, по умолчанию 300
-
-3) Установи зависимости:
-   ```bash
-   pip install requests
-   ```
-
-4) Запуск локально:
-   ```bash
-   export TELEGRAM_TOKEN="<твой_token>"
-   export TELEGRAM_CHAT_ID="1013871325"
-   python wb_price_bot.py
-   ```
-
-5) Деплой на бесплатный хостинг (Render / Railway / Replit):
-   - Создай новый проект (python service / web service or worker)
-   - Заливай этот файл в репозиторий (GitHub/GitLab) и укажи команду запуска: `python wb_price_bot.py`
-   - Укажи переменные окружения в настройках проекта (TELEGRAM_TOKEN, TELEGRAM_CHAT_ID)
-
-# Примечания
-- Скрипт использует публичный поисковый endpoint Wildberries. Формат ответа может меняться — в таком случае парсер нужно подправить.
-- Для уменьшения ложных срабатываний и дубликатов реализовано простое хранение `notified.json`.
-- Уважай правила Wildberries: не делай очень частые запросы и не запускай большой параллельный парсинг.
-
-# Конец
